@@ -1,7 +1,7 @@
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import path from 'path'
-// import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 import poststylus from 'poststylus'
 
@@ -27,11 +27,25 @@ const webpackConfig = {
           ]
         }
       }
-    })
+    }),
+    new ExtractTextPlugin("styles.css"),
   ],
   module: {
-    loaders: [
-      { test: /\.(css|styl)$/, loader: ['style-loader', 'css-loader', 'stylus-loader'] }
+    rules: [
+      { 
+        test: /\.css$/, 
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader'] 
+        }),
+      },
+      {
+        test: /\.(styl)$/, 
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'stylus-loader'] 
+        }),
+      }
     ],
   },
   devServer: {
