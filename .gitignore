@@ -1,3 +1,7 @@
+########## Custom ignores ##########
+dist/
+
+########## Node ignores ##########
 # Logs
 logs
 *.log
