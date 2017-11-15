@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <header class="header">
+  <header class="header main-header">
     <div class="container">
       <nav class="nav">
         <a href="#" class="nav__mobile-menu hidden-lg">
@@ -19,41 +19,47 @@
           <li class="nav__item"><a href="#">Page 3</a></li>
         </ul>
       </nav>
-      <div class="logo__image"></div>
+      <div class="logo__image my-future-now-logo"></div>
     </div>
   </header>
   <section class="container-fluid full-banner">
-    <div class="full-banner--content">
-      <h1 class="title full-banner--title title--state-reverse-color">Take control of your pension</h1>
-      <p>Our free service allows you to find all of your pensions and manage them in one secure place.</p>
-    </div>
-    <div class="full-banner--links-container">
-      <div class="btn-container">
-        <a href="#" class="btn btn--primary">Sign up for free</a>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="full-banner--content">
+            <h1 class="title full-banner--title title--state-reverse-color">Take control of your pension</h1>
+            <p>Our free service allows you to find all of your pensions and manage them in one secure place.</p>
+          </div>
+          <div class="full-banner--links-container">
+            <div class="btn-container">
+              <a href="#" class="btn btn--primary">Sign up for free</a>
+            </div>
+            <p>
+              <a href="#" class="link link--simple">Already registered? Log in</a>
+            </p>
+          </div>
+        </div>
       </div>
-      <p>
-        <a href="#" class="link link--simple">Already registered? Log in</a>
-      </p>
     </div>
   </section>
-  <section class="container">
+  <section class="container how-it-works">
     <header>
       <h1 class="title title--intro">HOW IT WORKS</h1>
       <h2 class="title title--spaced-line">Sorting your pension has never been this easy</h2>
     </header>
     <div class="row">
-      <div class="article col-sm-12">
-        <i class="icon icon-x"></i>
+      <div class="article col-xs-12 col-sm-4 how-it-works__item">
+        <i class="icon icon-glass"></i>
         <h1 class="title title--sub-item">Find</h1>
         <p>We gather some basic information from you and track down your pension information</p>
       </div>
-      <div class="article col-sm-12">
-        <i class="icon icon-x"></i>
+      <div class="article col-xs-12 col-sm-4 how-it-works__item">
+        <i class="icon icon-stats"></i>
         <h1 class="title title--sub-item">Compare</h1>
         <p>View all of your pension policies on a personalised, secure dashboard  </p>
       </div>
-      <div class="article col-sm-12">
-        <i class="icon icon-x"></i>
+      <div class="article col-xs-12 col-sm-4 how-it-works__item">
+        <i class="icon icon-money"></i>
         <h1 class="title title--sub-item">Consolidate</h1>
         <p>Transfer pensions into your current policy to make planning for your retirement easier</p>
       </div>
@@ -62,17 +68,23 @@
       <a href="#" class="btn btn--primary">How our service works</a>
     </div>
   </section>
-  <section class="container container--even">
-    <div class="illustration-banner"><img src="" alt="" class="illustration-banner__image"></div>
-    <header>
-      <h1 class="title title--intro">PENSION CONSOLIDATION</h1>
-      <h2 class="title">All your pensions in one place</h2>
-    </header>
-    <p>Our easy to use dashboard makes it easy to see all of your pensions in one secure place. If you’re looking to consolidate, you can transfer your existing pension pots into your current one with just a few clicks, completely free*</p>
-    <div class="btn-container"><a href="#" class="btn btn--primary">Sign up for free</a></div>
-    <footer class="footer-info">
-      <p><img src="partners" alt="Scottish Widows"></p>
-    </footer>
+  <section class="container--even pension-consolidation">
+    <div class="pension-consolidation__banner"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <header>
+            <h1 class="title title--intro">PENSION CONSOLIDATION</h1>
+            <h2 class="title">All your pensions in one place</h2>
+          </header>
+          <p>Our easy to use dashboard makes it easy to see all of your pensions in one secure place. If you’re looking to consolidate, you can transfer your existing pension pots into your current one with just a few clicks, completely free*</p>
+          <div class="btn-container"><a href="#" class="btn btn--primary">Sign up for free</a></div>
+          <footer class="footer-info">
+            <p>*In partnership with <br /><img src="<%=require("./img/widows.png")%>" alt="Scottish Widows"></p>
+          </footer>
+        </div>
+      </div>
+    </div>
   </section>
 </body>
 </html>

@@ -7,12 +7,26 @@ margin-bottom = 73px
   position relative
   text-align left
   margin-bottom margin-bottom + 133px
+  
+  +for_breakpoint(medium)
+    retina('./../img/Header_background-medium', 'png')
+    padding-top 15%
+    padding-bottom 15%
+    margin-bottom 113px
 
 .full-banner--content
   max-width 315px
   margin-left 4px
+  
+  +for_breakpoint(medium)
+    max-width none
+    margin-left 0
 
 .full-banner--links-container
   margin-top 42px
   margin-bottom - margin-bottom
   text-align center
+  
+  +for_breakpoint(medium)
+    max-width 322px
+    margin-bottom 0

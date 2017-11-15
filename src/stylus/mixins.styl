@@ -28,3 +28,11 @@ retina(file, ext)
          (                min-resolution: 2dppx)
     background-image: url(file'@2x.'ext)
     background-size: cover
+    
+for_breakpoint(breakpoints)
+  conditions = ()
+  for breakpoint in breakpoints
+    push(conditions, media_queries[breakpoint])
+  conditions = join(", ", conditions)
+  @media conditions
+    {block}

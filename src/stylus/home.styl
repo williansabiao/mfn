@@ -1,0 +1,45 @@
+.how-it-works
+  padding-bottom 142px
+  
+  +for_breakpoint(medium)
+    padding-bottom 106px
+  
+  .btn-container
+    margin-top 64px
+    +for_breakpoint(medium)
+      max-width 400px
+      margin-left auto
+      margin-right auto
+
+.how-it-works__item
+  margin-top 97px
+  +for_breakpoint(medium)
+    p
+      text-align left
+      max-width 260px
+
+.pension-consolidation
+  text-align left
+  padding-top 122px 
+  padding-bottom 87px
+  
+  .btn-container
+    margin 39px 0 51px
+    
+    +for_breakpoint(medium)
+      max-width 400px
+  
+.pension-consolidation__banner
+  retina('./../img/Macbook_Air', 'png')
+  width 100%
+  min-height 352px
+  background-size contain !important
+  background-repeat no-repeat !important
+  background-position right center
+  
+  +for_breakpoint(medium)
+    retina('./../img/Macbook_large', 'png')
+    float right
+    width 50%
+    height 600px
+    min-height auto
