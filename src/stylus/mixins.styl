@@ -1,0 +1,30 @@
+font-size($fontValue = base-font-size, $baseFontValue = base-font-size, $baseLineValue = base-line-height)
+  font-size   $fontValue px
+  font-size   ($fontValue / $baseFontValue) rem
+  line-height ($fontValue / $baseFontValue) * $baseLineValue px
+  line-height ($baseLineValue/$baseFontValue) * ($fontValue / $baseFontValue) rem
+
+PTSerif()
+  font-family 'PT Serif', serif
+  font-weight 400
+
+Montserrat($fontWeight = 400)
+  font-family 'Montserrat', sans-serif
+  font-weight $fontWeight
+  
+MontserratMedium()
+  Montserrat(600)
+  
+MontserratBold()
+  Montserrat(700)
+
+retina(file, ext)
+  background-image: url(file'.'ext)
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (  min--moz-device-pixel-ratio: 2),
+         (    -o-min-device-pixel-ratio: 2/1),
+         (        min-device-pixel-ratio: 2),
+         (                min-resolution: 192dpi),
+         (                min-resolution: 2dppx)
+    background-image: url(file'@2x.'ext)
+    background-size: cover
